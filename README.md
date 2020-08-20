@@ -1,6 +1,6 @@
 # autonetdiscover
 This tool will automate your netdiscover tool 
-
+ 
 Steps to run this tool:
     1. git clone https://github.com/krishpranav/autonetdiscover
     2. cd autonetdiscover
