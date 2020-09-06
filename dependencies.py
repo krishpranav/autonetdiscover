@@ -1,19 +1,20 @@
 #!usr/bin/env/python
 
-import os
+import subprocess
 import time
 
-os.system("clear")
+print("UPDATING")
+time.sleep(1)
+subprocess.call("sudo apt-get update", shell=True)
 time.sleep(2)
-print("STARTING INSTALLING DEPENDENCIES")
+print("INSTALLING PYTHON3 AND PIP")
+time.sleep(1)
+subprocess.call("sudo apt-get install python3-pip", shell=True)
 time.sleep(2)
-os.system("sudo apt-get update")
-os.system("sudo apt-get install figlet")
-os.system("sudo apt-get install python3-pip")
-os.system("pip3 install lolcat")
-os.system("clear")
+print("INSTALLING LOLCAT")
+time.sleep(1)
+subprocess.call("pip3 install lolcat", shell=True)
 time.sleep(2)
-os.system("figlet DONE | lolcat")
-time.sleep(2)
-print("you can run autonetdiscover by python3 autonetdiscover.py")
-exit()
+subprocess.call("figlet COMPLETED | lolcat", shell=True)
+time.sleep(1)
+print("INSTALLATION COMPLETED")
