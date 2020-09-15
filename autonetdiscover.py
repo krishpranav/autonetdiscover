@@ -1,6 +1,6 @@
 #!usr/bin/env/python
 
-import subprocess
+import os
 import time
 
 Y = set(['yes', 'y', 'YES', 'Y'])
@@ -11,11 +11,11 @@ alert = input("Are You Sure You Want To Scan Your Network Y / N ")
 
 def scanner():
     if alert in Y:
-        subprocess.call("figlet SCANNING | lolcat", shell=True)
+        os.system("figlet SCANNING | lolcat")
         time.sleep(2)
-        subprocess.call("sudo netdiscover -i" + interface, shell=True)
+        os.system("sudo netdiscover -i" + interface)
     elif alert in N:
-        subprocess.call("figlet OK BYE | lolcat", shell=True)
+        os.system("figlet OK BYE | lolcat")
         time.sleep(0.1)
         exit()
 scanner()
