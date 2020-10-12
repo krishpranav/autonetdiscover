@@ -1,4 +1,5 @@
 #!usr/bin/env/python
+#a helper file for installing dependencies
 
 #imports
 import os
