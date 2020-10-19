@@ -19,10 +19,10 @@ alert = input("Are You Sure You Want To Scan Your Network Y / N ")
 def scanner():
 	if alert in Y:
 		os.system("figlet SCANNING | lolcat")
-		time.sleep(3)
+		time.sleep(2)
 		os.system("sudo netdiscover -i" + interface)
 	elif alert in N:
-		os.system("figlet OK BYE")
+		os.system("figlet OK BYE | lolcat")
 		time.sleep(1)
 		exit()
 scanner()
